@@ -1,0 +1,91 @@
+/*[Imports]------------------------------------------*/
+@import (reference) "variables";
+
+body{
+  color: yellow;
+  background: url("http://gifgifs.com/animations/words/home/Home_sweet_home.gif") limegreen;
+}
+.logo{
+  background-color: blue;
+}
+h1{
+  color: red;
+}
+.main-nav{
+  border: blue dotted 7px;
+  background: url("http://gifgifs.com/animations/words/open/open_24_hours.gif") purple;
+  a{
+    text-decoration: blink;
+  }
+}
+article{
+  background: url("http://gifgifs.com/animations/science-body/hands-and-feet/Clapping.gif") magenta;
+  border: maroon 5px double;
+  p{
+    width: 100%;
+  }
+}
+
+/*[Switch]----------------------*/
+.styleswap{
+  height: 175px;
+}
+.switchbox{
+  position: absolute;
+  left: 30%;
+  background-color: darken(@color02,5%);
+  top: 36px;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 0 36px;
+  color: aquamarine;
+}
+.before{
+  display: none;
+}
+.css-check{
+  height: 58px;
+  width: 125px;
+  z-index: 1;
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  left: 130px;
+
+  + label{
+    outline: none;
+    user-select: none;
+  }
+
+  + label:before, + label:after{
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+  }
+
+  + label:before{
+    right: 40px;
+    background-color: darken(@color04, 20%);
+    border: 6px darken(@color02, 10%) solid;
+    border-radius: 60px;
+    transition: background 0.4s;
+    width: 120px;
+    display: block;
+    margin: 0 auto 0;
+  }
+
+  + label:after{
+    background-color: @white;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin-right: 245px;
+    height: 55px;
+    width: 55px;
+    position: relative;
+    transition: margin 0.4s;
+  }
+}

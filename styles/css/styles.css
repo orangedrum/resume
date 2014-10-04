@@ -1,0 +1,340 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:	Style Guide
+Version:	0.5
+Assigned to:	Jean Kaluza
+Primary use:	Guide
+-------------------------------------------------------------------*/
+/*[Imports]------------------------------------------*/
+.form-horizontal .form-group-sm .form-control {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.form-horizontal .form-group-lg .form-control {
+  height: 46px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+/*------------------------------------------------------------------
+[Typography]
+Typography is setup to work explicitly with google fonts
+-------------------------------------------------------------------*/
+body,
+html {
+  font-family: 'Open Sans', sans-serif;
+  color: #051b2d;
+  height: 100%;
+}
+.container {
+  position: relative;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+h1 {
+  font-size: 200%;
+  font-weight: 300;
+}
+h2 {
+  font-size: 150%;
+}
+h3 {
+  font-size: 140%;
+}
+h4 {
+  font-size: 130%;
+}
+h5 {
+  font-size: 110%;
+}
+h6 {
+  font-size: 105%;
+}
+/*------------------------------------------------------------------
+[Buttons & Links]
+-------------------------------------------------------------------*/
+.btn-blue {
+  margin: 30px auto;
+  background-color: #051b2d;
+  color: #f2f2f2;
+  padding: 4px 20px;
+  border-radius: 3px;
+  border: #ff8830 1px solid;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+.btn-blue:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border: 1px solid #051b2d;
+  color: #051b2d;
+}
+a {
+  font-weight: bolder;
+  color: #0f5289;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+a:hover {
+  color: #146eb7;
+}
+/*------------------------------------------------------------------
+[Header]
+-------------------------------------------------------------------*/
+header {
+  color: #051b2d;
+  width: 100%;
+  z-index: 100;
+  padding: 10px 0;
+  position: fixed;
+  /*[Navigation]----------------------------------*/
+}
+header h1 {
+  font-size: 173%;
+}
+header .logo {
+  text-align: left;
+  float: left;
+  color: lighter(#051b2d, 10%);
+}
+header a {
+  color: #051b2d;
+}
+header a:hover {
+  color: #0f5289;
+}
+header h2 {
+  font-size: 68%;
+  font-weight: 600;
+}
+header .main-nav {
+  text-align: right;
+  float: right;
+  border-radius: 3px;
+  -moz-box-shadow: inset 0 0 5px #8dbac0;
+  -webkit-box-shadow: inset 0 0 5px #8dbac0;
+  box-shadow: inset 0 0 5px #8dbac0;
+}
+header .main-nav ul {
+  padding: 3px;
+  margin: 0;
+  text-align: right;
+}
+header .main-nav li {
+  display: inline-block;
+  padding: 0 2px;
+}
+.sticky {
+  background-color: #cbdcdf;
+  border-bottom: #aeced2 solid 1px;
+  height: 42px;
+  transition: all 0.8s ease;
+}
+.sticky h1,
+.sticky h2 {
+  float: left;
+}
+.sticky h2 {
+  padding-left: 14px;
+  padding-top: 18px;
+}
+.sticky .main-nav {
+  -moz-box-shadow: inset 0 0 5px #9ec4c9;
+  -webkit-box-shadow: inset 0 0 5px #9ec4c9;
+  box-shadow: inset 0 0 5px #9ec4c9;
+}
+.sticky .main-nav a {
+  color: #051b2d;
+}
+/*[Hero]----------------------*/
+.hero {
+  background: url("../../img/square_bg.png") #aeced2;
+  padding-top: 94px;
+  border-bottom: 3px solid #8dbac0;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 42px;
+  margin: 10px 0 0;
+  color: #8dbac0;
+  text-shadow: 1px 1px #c5dcdf, -1px -1px #7db0b7;
+}
+.hero h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+  margin-top: -7px;
+  color: #6ca6ae;
+}
+.hero h3 span {
+  color: #c95500;
+}
+/*[Switch]----------------------*/
+.styleswap {
+  height: 175px;
+}
+.switchbox > div {
+  margin-top: 20px;
+}
+.switchbox p {
+  color: #051b2d;
+  padding-bottom: 6px;
+}
+.before {
+  display: none;
+}
+.css-check {
+  height: 58px;
+  width: 125px;
+  z-index: 1;
+  position: relative;
+  opacity: 0;
+  cursor: pointer;
+  left: 130px;
+}
+.css-check + label {
+  outline: none;
+  user-select: none;
+}
+.css-check + label:before,
+.css-check + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+.css-check + label:before {
+  right: 40px;
+  background-color: #ff8830;
+  border: 6px #8dbac0 solid;
+  border-radius: 60px;
+  transition: background 0.4s;
+  width: 120px;
+  display: block;
+  margin: 0 auto 0;
+}
+.css-check + label:after {
+  background-color: #f2f2f2;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-right: 103px;
+  height: 55px;
+  width: 55px;
+  position: relative;
+  transition: margin 0.4s;
+}
+/*------------------------------------------------------------------
+[Main]
+-------------------------------------------------------------------*/
+main {
+  background: #f2f2f2;
+  border-top: solid #e5e5e5 4px;
+  text-align: left;
+}
+/*[Opening]----------------------*/
+.opening {
+  text-align: justify;
+  width: 400px;
+  margin: 50px auto;
+  font-size: 13px;
+  line-height: 20px;
+  color: #727272;
+  position: relative;
+}
+.opening h2 {
+  float: left;
+  padding-right: 5px;
+}
+#iheartux {
+  padding: 4px 14px;
+  background-color: #d1b8a0;
+  border: 1px solid #b0855b;
+  position: absolute;
+  top: -74px;
+  right: 194px;
+  border-radius: 2px;
+  font-weight: bolder;
+  color: #051b2d;
+  -ms-transform: rotate(9deg);
+  /* IE 9 */
+  -webkit-transform: rotate(9deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(9deg);
+  box-shadow: 6px 2px 8px #a5a5a5;
+}
+#iheartux span {
+  color: #c95500;
+}
+/*------------------------------------------------------------------
+[Resume]
+-------------------------------------------------------------------*/
+.resume-section {
+  border-top: solid 2px #aeced2;
+  background-color: #051b2d;
+}
+.resume-section.scrollblocks {
+  position: inherit !important;
+}
+.resume-section .resume {
+  color: #ff8830;
+}
+.resume-section .resume h2,
+.resume-section .resume h3 {
+  text-align: center;
+  margin-top: 80px;
+}
+.resume-section .resume h2 {
+  font-size: 260%;
+}
+/*------------------------------------------------------------------
+[Contact]
+-------------------------------------------------------------------*/
+.contact {
+  border-top: #d9d9d9 1px solid;
+  text-align: center;
+  padding: 40px 0;
+}
+.contact form {
+  width: 60%;
+  margin: 0 auto;
+}
+.contact form input {
+  margin: 23px 0;
+}
+.contact .btn-blue {
+  margin-bottom: 0;
+}
+/*------------------------------------------------------------------
+[Footer]
+-------------------------------------------------------------------*/
+footer {
+  width: 100%;
+  background: #051b2d;
+  color: #aeced2;
+  border-top: #ff8830 solid 2px;
+  font-size: 13px;
+  padding: 12px 0;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+}
