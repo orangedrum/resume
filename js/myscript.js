@@ -23,21 +23,4 @@ $(document).ready(function(){
 	    	$(".before").css("display", "none");
 	    }
 	});
-
-	
-
-
-	//scrollorama
-    var scrollorama = $.scrollorama({ blocks:'.resume-scroll'; enablePin:false });
-
-    // assign function to add behavior for onBlockChange event
-	scrollorama.onBlockChange(function() {
-		var i = scrollorama.blockIndex;
-		$('#console')
-			.css('display','block')
-			.text('onBlockChange | blockIndex:'+i+' | current block: '+scrollorama.settings.blocks.eq(i).attr('id'));
-	});
-
-    scrollorama.animate('.resume-scroll h2',{ duration: 900, property:'zoom', end: 8 });
-
 });

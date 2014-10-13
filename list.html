@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Shopping list app</title>
+ <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script>
+	$(document).ready(function(){
+		$("#myButton").click(function(){
+	 		var input = $('#myInput').val();
+	 		$("#myList").append('<li class="item">' +input+ '</li>');
+
+	 		$("#myList").on('click', '.item', function(){
+	 			$(this).toggleClass('cross');
+	 		});
+
+	 		//double click to remove
+	 		$("#myList").on('click', '.item', function(){
+	 			$(this).toggleClass('cross');
+	 		});
+
+	 		//instructions that can collapse
+	 		$("#instructions").click(function(){
+				$("#pumpkin-icecream").css("display","block");
+			});
+	 	});
+	});
+ </script>
+ <style>
+ 	.cross{
+ 		text-decoration: line-through;
+ 	}
+ 	#pumpkin-icecream{
+ 		display: none;
+ 	}
+ </style>
+</head>
+<body>
+	<input type="text" id="myInput">
+	<button id="myButton">Add Item</button>
+
+	<ul id="myList">
+		<li class="item">Milk</li>
+	</ul>
+
+	<div class="a">
+		<button id="instructions">Instructions</button>
+		<p id="pumpkin-icecream">Pick up the spoon and put the pumpkin icecream in your mouth.</p>
+	</div>
+</body>
+</html>

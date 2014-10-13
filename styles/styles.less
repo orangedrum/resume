@@ -80,6 +80,7 @@ a:hover{
   color: lighten(@black, 30%);
 }
 
+
 /*------------------------------------------------------------------
 [Header]
 -------------------------------------------------------------------*/
@@ -137,9 +138,8 @@ header{
   h1, h2{
     float: left;
   }
-  h2{
-    padding-left: 14px;
-    padding-top: 18px;
+  h1{
+    font-size: 20px;
   }
   .main-nav{
     -moz-box-shadow: inset 0 0 5px darken(@color02, 5%);
@@ -284,22 +284,68 @@ main{
 /*------------------------------------------------------------------
 [Resume]
 -------------------------------------------------------------------*/
+html, body{
+  width: 100%;
+  height: 100%;
+}
 .resume-section{
-  &.scrollblocks{
-    position: inherit !important;
-  }
-  //display: none;
   border-top: solid 2px @color02;
-  background-color: @black;
+  background: url("../../img/stacked_circles.png") @black;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+  #slide-1{
+    background-color: blue;
+  }
+  #slide-2{
+    background-color: green;
+  }
+  #slide-3{
+    background-color: purple;
+  }
+  #slide-4{
+    background-color: yellow;
+  }
 
   .resume{
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
     color: @color04;
+    width: 50%;
+    margin: 0 auto;
+    border-top: solid 3px @color04;
+    text-align: center;
+
+    ul{
+      text-align: left;
+    }
+
+    div h2{
+      margin-top: -14px;
+    }
+
+    section{
+      margin-top: 200px;
+    }
     h2, h3{
       text-align: center;
-      margin-top: 80px;
+      text-transform: uppercase;
     }
     h2{
       font-size: 260%;
+    }
+    #scroll2{
+      text-align: center;
     }
   }
 }
@@ -336,6 +382,7 @@ footer{
   font-size: 13px;
   padding: 12px 0;
   text-align: center;
+  clear: both;
 
   p{
     margin: 0;

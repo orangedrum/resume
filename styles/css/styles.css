@@ -149,9 +149,8 @@ header .main-nav li {
 .sticky h2 {
   float: left;
 }
-.sticky h2 {
-  padding-left: 14px;
-  padding-top: 18px;
+.sticky h1 {
+  font-size: 20px;
 }
 .sticky .main-nav {
   -moz-box-shadow: inset 0 0 5px #9ec4c9;
@@ -287,23 +286,67 @@ main {
 /*------------------------------------------------------------------
 [Resume]
 -------------------------------------------------------------------*/
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 .resume-section {
   border-top: solid 2px #aeced2;
-  background-color: #051b2d;
+  background: url("../../img/stacked_circles.png") #051b2d;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-.resume-section.scrollblocks {
-  position: inherit !important;
+.resume-section .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+}
+.resume-section #slide-1 {
+  background-color: blue;
+}
+.resume-section #slide-2 {
+  background-color: green;
+}
+.resume-section #slide-3 {
+  background-color: purple;
+}
+.resume-section #slide-4 {
+  background-color: yellow;
 }
 .resume-section .resume {
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
   color: #ff8830;
+  width: 50%;
+  margin: 0 auto;
+  border-top: solid 3px #ff8830;
+  text-align: center;
+}
+.resume-section .resume ul {
+  text-align: left;
+}
+.resume-section .resume div h2 {
+  margin-top: -14px;
+}
+.resume-section .resume section {
+  margin-top: 200px;
 }
 .resume-section .resume h2,
 .resume-section .resume h3 {
   text-align: center;
-  margin-top: 80px;
+  text-transform: uppercase;
 }
 .resume-section .resume h2 {
   font-size: 260%;
+}
+.resume-section .resume #scroll2 {
+  text-align: center;
 }
 /*------------------------------------------------------------------
 [Contact]
@@ -334,6 +377,7 @@ footer {
   font-size: 13px;
   padding: 12px 0;
   text-align: center;
+  clear: both;
 }
 footer p {
   margin: 0;
